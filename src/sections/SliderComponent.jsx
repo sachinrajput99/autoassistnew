@@ -39,7 +39,7 @@ function SliderComponent() {
             return (
               <div key={index} className="bg-white">
                 <div>
-                  <img src={item.src} alt={item.alt} className="w-full h-[500px] object-cover block m-auto" />
+                  <img src={item.src} alt={item.alt} clazzssName="w-full h-[500px] object-cover block m-auto" />
                 </div>
                 {/* no needof description */}
                 {/* <div className="p-6 bg-blue-600">

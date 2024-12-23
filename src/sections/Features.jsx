@@ -1,5 +1,4 @@
-import { Suspense, useState } from 'react';
-
+import {  useState } from 'react';
 import { features } from '../constants/index.js';
 
 const Features = () => {
@@ -19,9 +18,9 @@ const Features = () => {
                   onClick={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOut={() => setAnimationName('idle')}
-                  className="work-content_container group">
+                  className="work-content_container group transform transition-all duration-500 ease-in-out hover:scale-105 hover:translate-y-3 hover:shadow-2xl hover:scale-105 hover:perspective-1000">
                   <div className="flex flex-col h-full justify-start items-center py-2">
-                    <div className="work-content_logo">
+                    <div className="work-content_logo transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:translate-z-10">
                       <img className="w-full h-full" src={item.icon} alt="" />
                     </div>
 
@@ -29,11 +28,15 @@ const Features = () => {
                   </div>
 
                   <div className="sm:p-5 px-2.5 py-5">
-                    <p className="font-bold text-white-800">{item.name}</p>
+                    <p className="font-bold text-white-800 transition-all duration-300 group-hover:text-teal-400">
+                      {item.name}
+                    </p>
                     <p className="text-sm mb-5">
                       {item.pos} -- <span>{item.duration}</span>
                     </p>
-                    <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.title}</p>
+                    <p className="group-hover:text-white transition-all ease-in-out duration-500 group-hover:scale-105">
+                      {item.title}
+                    </p>
                   </div>
                 </div>
               ))}

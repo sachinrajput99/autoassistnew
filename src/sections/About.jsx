@@ -1,13 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Globe from 'react-globe.gl';
-
 import Button from '../components/Button.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slideInCard');
+            observer.unobserve(entry.target); // Trigger animation only once
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger animation when 10% of the element is visible
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' adrian@jsmastery.pro');
+    navigator.clipboard.writeText('adrian@jsmastery.pro');
     setHasCopied(true);
 
     setTimeout(() => {
@@ -18,10 +38,13 @@ const About = () => {
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
+        {/* Box 1 */}
+        <div
+          className="col-span-1 xl:row-span-3 opacity-0 transform translate-x-[-50px]"
+          ref={(el) => (cardRefs.current[0] = el)}
+        >
           <div className="grid-container">
             <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-
             <div>
               <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
               <p className="grid-subtext">
@@ -32,10 +55,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
+        {/* Box 2 */}
+        <div
+          className="col-span-1 xl:row-span-3 opacity-0 transform translate-x-[-50px]"
+          ref={(el) => (cardRefs.current[1] = el)}
+        >
           <div className="grid-container">
             <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
-
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
@@ -46,7 +72,11 @@ const About = () => {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-4">
+        {/* Box 3 */}
+        <div
+          className="col-span-1 xl:row-span-4 opacity-0 transform translate-x-[-50px]"
+          ref={(el) => (cardRefs.current[2] = el)}
+        >
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
@@ -69,10 +99,13 @@ const About = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-2 xl:row-span-3">
+        {/* Box 4 */}
+        <div
+          className="xl:col-span-2 xl:row-span-3 opacity-0 transform translate-x-[-50px]"
+          ref={(el) => (cardRefs.current[3] = el)}
+        >
           <div className="grid-container">
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
-
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
@@ -83,14 +116,17 @@ const About = () => {
           </div>
         </div>
 
-        <div className="xl:col-span-1 xl:row-span-2">
+        {/* Box 5 */}
+        <div
+          className="xl:col-span-1 xl:row-span-2 opacity-0 transform translate-x-[-50px]"
+          ref={(el) => (cardRefs.current[4] = el)}
+        >
           <div className="grid-container">
             <img
               src="assets/grid4.png"
               alt="grid-4"
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
-
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>

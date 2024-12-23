@@ -46,10 +46,9 @@ const About = () => {
           <div className="grid-container">
             <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
             <div>
-              <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
+              <p className="grid-headtext">For any budget</p>
               <p className="grid-subtext">
-                With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
-                and responsive websites.
+              From Bikes and Autos to Prime Sedans and Prime SUVs, you will find a ride in your budget at your convenience any time.
               </p>
             </div>
           </div>
@@ -63,10 +62,9 @@ const About = () => {
           <div className="grid-container">
             <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
             <div>
-              <p className="grid-headtext">Tech Stack</p>
+              <p className="grid-headtext">For any distance</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+              Book rides within the city with Daily, or take a trip to your favourite destinations outside the city with Outstation.
               </p>
             </div>
           </div>
@@ -92,9 +90,9 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Rjieka, Croatia and open to remote work worldwide.</p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <p className="grid-headtext">For any duration</p>
+              <p className="grid-subtext">Easily plan a day out without having to worry about conveyance with an hour-based package from Rental.</p>
+            
             </div>
           </div>
         </div>
@@ -107,10 +105,9 @@ const About = () => {
           <div className="grid-container">
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
+              <p className="grid-headtext">For any duration</p>
               <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+              Easily plan a day out without having to worry about conveyance with an hour-based package from Rental.
               </p>
             </div>
           </div>
@@ -121,20 +118,7 @@ const About = () => {
           className="xl:col-span-1 xl:row-span-2 opacity-0 transform translate-x-[-50px]"
           ref={(el) => (cardRefs.current[4] = el)}
         >
-          <div className="grid-container">
-            <img
-              src="assets/grid4.png"
-              alt="grid-4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
-            />
-            <div className="space-y-2">
-              <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">adrian@jsmastery.pro</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

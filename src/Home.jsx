@@ -11,6 +11,9 @@ import Render from './sections/Render.jsx';
 import Dashboard from './sections/Dashboard.jsx';
 import DownloadSection from './sections/DownloadSection.jsx';
 import { useLayoutEffect } from 'react';
+import Projects1 from './sections/Projects1.jsx';
+import Projects2 from './sections/Projects2.jsx';
+
 
 
 const Home = () => {
@@ -30,7 +33,10 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <Projects />   
+        <Projects1 />    
+         <Projects2 />
+       
       <Features />
       <Render />
       <Dashboard />

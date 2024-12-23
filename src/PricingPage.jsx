@@ -1,6 +1,7 @@
 import FreePlanCard from './sections/moreComponent/FreePlanCard.jsx';
 import PricingCard from './sections/moreComponent/PricingCard.jsx';
 import PlanComparisonTable from './sections/moreComponent/PlanComparisonTable.jsx';
+import CustomizedCard from './sections/moreComponent/CustomizedCard.jsx';
 
 const PricingPage = () => {
   return (
@@ -12,6 +13,7 @@ const PricingPage = () => {
         <div className="flex gap-7  flex-col sm:flex-row">
           <FreePlanCard />
           <PricingCard />
+          <CustomizedCard/>
         </div>
       </div>
       <PlanComparisonTable />

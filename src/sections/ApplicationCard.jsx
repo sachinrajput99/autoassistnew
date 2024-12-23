@@ -6,13 +6,13 @@ const ApplicationCard = ({ downloadStore, type, logo, image, image3 }) => {
       {/* Type */}
       <p className="text-2xl lg:text-4xl text-white  font-semibold mb-4">{type}</p>
       {/* Download Store */}
-      <p className="text-lg lg:text-2xl text-gray-300  font-semibold">Download free app from {downloadStore}</p>
+      <p className="text-lg lg:text-xl text-gray-300  font-semibold">Download free app from {downloadStore}</p>
       {/* App Sections */}
       <div className="ml-2 lg:ml-4 my-6">
         {/* Titles */}
         <div className="flex flex-col lg:flex-row lg:gap-16 mb-4">
-          <p className="text-gray-300 underline lg:text-xl font-serif font-semibold">Customer App</p>
-          <p className="text-gray-300 underline  lg:text-xl font-serif font-semibold">Driver App</p>
+          <p className="text-gray-300  lg:text-xl font-serif font-semibold">Customer App</p>
+          <p className="text-gray-300   lg:text-xl font-serif font-semibold">Driver App</p>
         </div>
         {/* Logos */}
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-20">

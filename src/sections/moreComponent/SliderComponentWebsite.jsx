@@ -20,7 +20,7 @@ const images = [
   },
 ];
 
-function SliderComponent() {
+function SliderComponentWebsite() {
   let settings = {
     dots: true,
     infinite: true,
@@ -54,4 +54,4 @@ function SliderComponent() {
   );
 }
 
-export default SliderComponent;
+export default SliderComponentWebsite;
